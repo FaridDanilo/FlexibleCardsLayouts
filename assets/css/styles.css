@@ -1,0 +1,107 @@
+@import url('https://fonts.google.com/specimen/Poppins');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+
+    /* Primary Colors */
+    --primary-red: hsl(0, 78%, 62%);
+    --primary-cyan: hsl(180, 62%, 55%);
+    --primary-orange: hsl(34, 97%, 64%);
+    --primary-blue: hsl(212, 86%, 64%);
+
+    /* Neutral Colors */
+    --neutral-dark-gray: hsl(234, 12%, 34%);
+    --neutral-gray: hsl(212, 6%, 44%);
+    --neutral-white: hsl(0, 0%, 100%);
+}
+
+h1, h2, p {
+    display: flex;
+    justify-content: center;
+    font-weight: normal;
+    color: var(--neutral-gray);
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--neutral-dark-gray);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.cards-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 30px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 250px;
+    border-radius: 5px;
+    color: var(--neutral-gray);
+    padding: 20px 15px 20px 15px;
+    box-shadow: 0 8px 32px 0 rgba(60, 60, 120, 0.12), 0 1.5px 6px 0 rgba(60, 60, 120, 0.08);
+}
+
+.title-card {
+    display: flex;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--neutral-dark-gray);
+}
+
+.svg-icon {
+    margin-top: auto;
+    align-self: flex-end;
+    padding: 1.2rem;
+}
+
+.supervisor {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    border-top: 4px solid var(--primary-cyan);
+}
+
+.builder {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    border-top: 4px solid var(--primary-red);
+}
+
+.calculator {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    border-top: 4px solid var(--primary-blue);
+}
+
+.karma {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    border-top: 4px solid var(--primary-orange);
+}   
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
