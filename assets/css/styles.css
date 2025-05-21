@@ -4,36 +4,41 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
 }
 
 :root {
-
     /* Primary Colors */
     --primary-red: hsl(0, 78%, 62%);
     --primary-cyan: hsl(180, 62%, 55%);
     --primary-orange: hsl(34, 97%, 64%);
     --primary-blue: hsl(212, 86%, 64%);
-
+    --primary-white: hsl(0, 0%, 100%);
+    
     /* Neutral Colors */
     --neutral-dark-gray: hsl(234, 12%, 34%);
     --neutral-gray: hsl(212, 6%, 44%);
-    --neutral-white: hsl(0, 0%, 100%);
+    --neutral-white: hsl(0, 0%, 98%);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--neutral-white);
 }
 
 .header-content {
-    position: relative;
     display: flex;
-    top: 6rem;
-    width: 100%;
     flex-direction: column;
     align-items: center;
 }
 
+.header-content p {
+    width: 55ch;
+}
+
 h1, h2, p {
+    text-align: center;
     font-weight: normal;
     color: var(--neutral-gray);
-    text-align: center;
 }
 
 h2 {
@@ -41,11 +46,6 @@ h2 {
     font-weight: 700;
     color: var(--neutral-dark-gray);
     margin-bottom: 1rem;
-}
-
-p {
-    width: 55ch;
-    font-size: 15px;
 }
 
 main {
@@ -57,6 +57,8 @@ main {
 
 .cards-container {
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
     gap: 30px;
 }
 
@@ -68,15 +70,19 @@ main {
     line-height: 1.5rem;
     border-radius: 5px;
     color: var(--neutral-gray);
+    background-color: var(--primary-white);
     box-shadow: 0 8px 32px 0 rgba(60, 60, 120, 0.12), 0 1.5px 6px 0 rgba(60, 60, 120, 0.08);
 }
 
 .title-card {
-    display: flex;
     font-size: 1.3rem;
     font-weight: bold;
     margin-bottom: 10px;
     color: var(--neutral-dark-gray);
+}
+
+.card-description {
+    text-align: left;
 }
 
 .svg-icon {
@@ -109,10 +115,47 @@ main {
 }
 
 .attribution {
-    font-size: 11px;
+    font-size: 15px;
     text-align: center;
 }
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .cards-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header-content p {
+        width: 33ch;
+        margin-bottom: 3.5rem;
+    }
+
+    .card:nth-of-type(4) {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .cards-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header-content {
+        margin-top: 3.3rem;
+    }
+
+    .header-content p {
+        width: 33ch;
+        margin-bottom: 3.5rem;
+    }
+
+    .card:nth-of-type(4) {
+        margin-bottom: 2rem;
+    }
 }
