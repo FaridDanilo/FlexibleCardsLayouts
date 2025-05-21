@@ -134,10 +134,19 @@ main {
         width: 33ch;
         margin-bottom: 3.5rem;
     }
+    
+    .card {
+        margin: 5px;
+    }
 
     .card:nth-of-type(4) {
         margin-bottom: 2rem;
     }
+
+    h1, h2 {
+        font-size: 1.5rem;
+    }
+
 }
 
 @media (max-width: 575.98px) {
@@ -154,8 +163,17 @@ main {
         width: 33ch;
         margin-bottom: 3.5rem;
     }
+    
+    .card {
+        margin: 5px;
+    }
 
     .card:nth-of-type(4) {
         margin-bottom: 2rem;
     }
+
+    h1, h2 {
+        font-size: 1.5rem;
+    }
+
 }
