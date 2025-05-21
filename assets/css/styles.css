@@ -173,7 +173,7 @@ main {
     }
     
     .card {
-        margin: 5px;
+        margin: 0 1.8rem 0 1.8rem;
     }
 
     .card:nth-of-type(4) {
